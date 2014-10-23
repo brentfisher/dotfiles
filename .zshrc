@@ -57,7 +57,6 @@ set -g default-terminal "screen-256color"
 #   fi
 # }
 # 
-jp2a /Users/bfisher/apple.jpg  --colors --width=35 --height=20 --background=light
 
 source ~/zshuery/zshuery.sh
 load_defaults
