@@ -1,0 +1,36 @@
+" ge Vundle
+" required! 
+ Bundle 'gmarik/vundle'
+
+" My Bundles here:
+
+Bundle 'git://github.com/markabe/bufexplorer.git'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'git://github.com/Shougo/unite.vim.git'
+Bundle 'jcf/vim-latex'
+" Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-fugitive'
+" SnipMate {
+	" Bundle "MarcWeber/vim-addon-mw-utils"
+	" Bundle "tomtom/tlib_vim"
+	" Bundle "garbas/vim-snipmate"
+	" Bundle "honza/vim-snippets"
+  " Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
+" }
+" Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'godlygeek/tabular'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'Lokaltog/vim-powerline'
+" Bundle 'https://github.com/rking/ag.vim'
+Bundle 'https://github.com/scrooloose/nerdtree.git'
+" Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+" Bundle "https://github.com/wincent/Command-T.git" 
+Bundle "pangloss/vim-javascript"
+"Bundle "jelera/vim-javascript-syntax"
+" Bundle "git://github.com/Valloric/YouCompleteMe"
+Bundle 'flazz/vim-colorschemes'
+" Bundle "git://github.com/Shougo/vimshell.vim"
+Bundle 'fatih/vim-go'
