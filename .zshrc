@@ -1,78 +1,33 @@
-# Path to your oh-my-zsh configuration.
-# ZSH=$HOME/.oh-my-zsh
-
-# This RVM nonsense totally doesn't work in ZSH, adding rvm ruby to my path later
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# ZSH_THEME="agnoster"
-# ZSH_THEME="arrow"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias hayley="jp2a hayley.jpg --colors --width=200"
 alias nr="repl.history"
 alias ls='ls -G -p'
-# alias ack='ack -a --ignore-dir={node_modules,test,spec,tmp,coverage}'
+#alias ack='ack -a --ignore-dir={node_modules,test,spec,tmp,coverage}'
 #alias ack= 'ag *$ --ignore-dir={node_modules,test,spec,tmp,coverage}'
 function fack () {
   ag $@ --ignore-dir={node_modules,test,spec,tmp,coverage,vendor,log}
 }
+#node-webkit shortcut
 alias nw='/Applications/node-webkit.app/Contents/MacOS/node-webkit'
-# Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(zsh-syntax-highlighting)
-# 
-# source $ZSH/oh-my-zsh.sh
-# 
+#stop autocorrect on the following commands
+alias ssh='nocorrect ssh'
+alias rpsec='nocorrect bundle exec rspec'
+#alias vim to macvim
+alias vim='vi'
+alias nyan="nc -v nyancat.dakko.us 23"
+alias irc="irssi"
+
 bindkey -v #use VIM mappings for editing commands in ZSH
 bindkey '\C-b' history-beginning-search-backward
 bindkey '\C-f' history-beginning-search-forward
-# 
-# #stop autocorrect on the following commands
-alias ssh='nocorrect ssh'
-alias rpsec='nocorrect bundle exec rspec'
 
-#alias vim to macvim
-alias vim='vi'
-
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export NODE_PATH=/usr/local/share/npm/bin
-export AWS_ACCESS_KEY_ID=
-export AWS_SECRET_ACCESS_KEY=
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:$NODE_PATH
-#unsetopt correct
-alias agsh='ssh -F ~/.ag/SilverLining.conf'
-alias agcp='scp -F ~/.ag/SilverLining.conf'
 export MONGO_DEV_CONN=mongodb://localhost:27017/inteljs
 export MONGO_CONN=mongodb://localhost:27017/inteljs
-export INTELJS_DEV_KEY=
-export CB_MOBILE_DEV_KEY=
-export AWS_DEVTOOLS_INTELJS=
-export AWS_DEVTOOLS_INTELJS_SECRET=
 export TERM=screen-256color #adds 256 color support for tmux. Fixes colors in VIM
-export PATH="/Users/bfisher/.rvm/gems/ruby-1.9.3-p545/bin:/Users/bfisher/.rvm/gems/ruby-1.9.3-p545@global/bin:/Users/bfisher/.rvm/rubies/ruby-1.9.3-p545/bin:$PATH"
 export LOCAL_BUNDLE=true
-export CB_MOBILE_DEV_KEY=
-export SECRET_KEY_BASE=
 export RUN_MODE=wwwtest
 export GOPATH="/usr/local/Cellar/go/1.2.1/src/pkg/code.google.com/p/"
 export DOCKER_HOST="tcp://localhost:4243"
-export OAUTH_CONSUMER_CLIENT_ID=
-export OAUTH_CONSUMER_SHARED_SECRET=
-export NICHE_GA_ACCOUNT_MBOX=
-export NICHE_GA_ACCOUNT_PWD=
-export MINGLE_CREDS=
-export BING_DEV_KEY=
 export REDIS_URL="redis://127.0.0.1"
 export KEYTIMEOUT=1 #quickens time between different modes in VIM
 
@@ -82,10 +37,13 @@ export TWITTER_OAUTH_CALLBACK="http://127.0.0.1:3000/auth/twitter/callback"
 export SESSION_SECRET=
 export TWITTER_CONSUMER_KEY=
 export TWITTER_CONSUMER_SECRET=
-#
+
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH="/Users/bfisher/.rvm/gems/ruby-1.9.3-p545/bin:/Users/bfisher/.rvm/gems/ruby-1.9.3-p545@global/bin:/Users/bfisher/.rvm/rubies/ruby-1.9.3-p545/bin:$PATH"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$NODE_PATH
+
 set -g default-terminal "screen-256color"
-alias nyan="nc -v nyancat.dakko.us 23"
-alias irc="irssi"
 # alias node='env NODE_NO_READLINE=1 rlwrap node'
 
 # function node () {
