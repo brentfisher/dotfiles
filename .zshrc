@@ -12,7 +12,7 @@ alias nw='/Applications/node-webkit.app/Contents/MacOS/node-webkit'
 alias ssh='nocorrect ssh'
 alias rpsec='nocorrect bundle exec rspec'
 #alias vim to macvim
-alias vim='vi'
+alias vim='mvim -v'
 alias nyan="nc -v nyancat.dakko.us 23"
 alias irc="irssi"
 
