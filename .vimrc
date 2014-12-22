@@ -45,6 +45,8 @@ augroup END
 
 autocmd BufRead,BufNewFile *.md,*.markdown set filetype=md autoread
 autocmd BufRead,BufNewFile *.jade set filetype=jade autoread
+autocmd BufRead,BufNewFile *.handlebars set filetype=html autoread
+autocmd BufRead,BufNewFile *.json,*.gyp set filetype=javascript autoread
 autocmd BufRead,BufNewFile html set smartindent
 
 syntax enable
