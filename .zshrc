@@ -1,6 +1,7 @@
 alias hayley="jp2a hayley.jpg --colors --width=200"
 alias nr="repl.history"
 alias ls='ls -G -p'
+#alias open="nautilus" #ubuntu
 #alias ack='ack -a --ignore-dir={node_modules,test,spec,tmp,coverage}'
 #alias ack= 'ag *$ --ignore-dir={node_modules,test,spec,tmp,coverage}'
 function fack () {
@@ -24,6 +25,7 @@ export NODE_PATH=/usr/local/share/npm/bin
 export MONGO_DEV_CONN=mongodb://localhost:27017/inteljs
 export MONGO_CONN=mongodb://localhost:27017/inteljs
 export TERM=screen-256color #adds 256 color support for tmux. Fixes colors in VIM
+#export TERM=xterm-256color #sometimes this works better in different distros of linux
 export LOCAL_BUNDLE=true
 export RUN_MODE=wwwtest
 export GOPATH="/usr/local/Cellar/go/1.2.1/src/pkg/code.google.com/p/"
