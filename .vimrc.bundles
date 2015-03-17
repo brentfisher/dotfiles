@@ -34,3 +34,4 @@ Bundle "pangloss/vim-javascript"
 Bundle 'flazz/vim-colorschemes'
 " Bundle "git://github.com/Shougo/vimshell.vim"
 Bundle 'fatih/vim-go'
+Bundle 'digitaltoad/vim-jade'
