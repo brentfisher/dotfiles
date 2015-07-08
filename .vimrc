@@ -35,6 +35,7 @@
     set smartindent
     let mapleader=","
     nnoremap <leader>q :q!
+    map q: :q
     let g:Powerline_symbols = 'fancy'
 " }
 
