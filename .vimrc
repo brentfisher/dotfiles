@@ -1,66 +1,51 @@
-" Bundle Support {
-	set nocompatible
-	filetype off
+set noswapfile
+syntax on
+call plug#begin('~/.vim/plugged')
+Plug 'git://github.com/markabe/bufexplorer.git'
+Plug 'tomtom/tcomment_vim'
+Plug 'git://github.com/Shougo/unite.vim.git'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-fugitive'
+Plug 'kien/ctrlp.vim'
+Plug 'godlygeek/tabular'
+Plug 'vim-ruby/vim-ruby'
+Plug 'Lokaltog/vim-powerline'
+Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'tomtom/tlib_vim'
+Plug 'pangloss/vim-javascript'
+Plug 'flazz/vim-colorschemes'
+Plug 'fatih/vim-go'
+Plug 'digitaltoad/vim-jade'
+call plug#end()
 
-	set rtp+=~/.vim/bundle/vundle/
-    call vundle#rc()
-" }
-" Bundles {
+syntax on
 
-    " Use local bundles if available {
-        if filereadable(expand("~/.vimrc.bundles"))
-            source ~/.vimrc.bundles
-        endif
-    " }
-  
-    filetype plugin indent on     " required for bundles!
-    set noswapfile
-    "Ctrlp
-    let g:ctrlp_working_path_mode = 'r'
-    " let g:ctrlp_custom_ignore = {
-    "       \ 'dir': '\node_modules/'
-    "       \ }
-    set wildignore+=*/tmp/*,*/node_modules/*
-    "end Ctrlp
-    set autoread
-    set viewoptions=folds,options,cursor,unix,slash   
-    set tabstop=2
-    set shiftwidth=2
-    set softtabstop=2
-    set shiftround
-    set expandtab
-    set relativenumber 
-    syntax on
-    set number
-    set smartindent
-    let mapleader=","
-    nnoremap <leader>q :q!
-    set pastetoggle=<F2>
-    map q: :q
-    let g:Powerline_symbols = 'fancy'
-" }
+colorscheme gruvbox
+set background=dark
 
-augroup filetype_json
-  autocmd!
-  autocmd FileType json set equalprg=json_reformat
-augroup END
+set noswapfile
+set wildignore+=*/tmp/*,*/node_modules/*
+set autoread
+set viewoptions=folds,options,cursor,unix,slash
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set shiftround
+set expandtab
+set relativenumber
+set number
+set smartindent
+set pastetoggle=<F2>
+
+nnoremap <leader>q :q!
+map q: :q
+
+let mapleader=","
+let g:Powerline_symbols = 'fancy'
+let g:ctrlp_working_path_mode = 'r'
 
 autocmd BufRead,BufNewFile *.md,*.markdown set filetype=md autoread
 autocmd BufRead,BufNewFile *.jade set filetype=jade autoread
 autocmd BufRead,BufNewFile *.handlebars set filetype=html autoread
 autocmd BufRead,BufNewFile *.json,*.gyp set filetype=javascript autoread
 autocmd BufRead,BufNewFile html set smartindent
-
-syntax enable
-"colorscheme Monokai
-colorscheme gruvbox
-set background=dark
-
-if has('gui_running')
-set guioptions-=T           " Remove the toolbar
-set lines=40                " 40 lines of text instead of 24
-set background=dark
-set guifont=Menlo\ Regular\ for\ Powerline:h14
-" cal SetSyn("javascript2") 
-endif
-" } 
